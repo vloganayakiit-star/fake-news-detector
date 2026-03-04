@@ -1,8 +1,13 @@
-"""
 import subprocess
 import sys
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn", "numpy", "pandas", "plotly"])
+# Auto-install required packages (fixes Streamlit Cloud deployment issues)
+subprocess.check_call([
+    sys.executable, "-m", "pip", "install", "--quiet",
+    "scikit-learn", "numpy", "pandas", "plotly", "streamlit"
+])
+
+"""
 ╔══════════════════════════════════════════════════════════════╗
 ║  FAKE NEWS DETECTOR - MAXIMUM ACCURACY VERSION               ║
 ║  Uses REAL Kaggle Dataset (44,000 articles) if available     ║
