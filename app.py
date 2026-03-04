@@ -1,4 +1,8 @@
 """
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn", "numpy", "pandas", "plotly"])
 ╔══════════════════════════════════════════════════════════════╗
 ║  FAKE NEWS DETECTOR - MAXIMUM ACCURACY VERSION               ║
 ║  Uses REAL Kaggle Dataset (44,000 articles) if available     ║
